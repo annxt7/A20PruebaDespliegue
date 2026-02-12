@@ -1,0 +1,22 @@
+.addButton{
+background-color: #b0ff8c; 
+border: none;
+border-radius: 5px;
+color: rgb(0, 0, 0); 
+padding: 10px 10px;
+text-align: center; 
+display: inline-block; 
+font-size: 13px; 
+margin-left: 10px;
+}
+.deleteButton{
+border: none;
+border-radius: 5px;
+color: white;
+background-color: rgb(255, 65, 65);
+text-decoration: none;
+padding: 10px 10px;
+text-align: center; 
+font-size: 13px; 
+margin: 10px;
+}

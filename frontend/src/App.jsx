@@ -22,6 +22,10 @@ export default function App() {
     setTitle("");
     loadItems();
   }
+  async function deleteItem(id) {
+    setItems(items.filter(item => item.id !== id));
+
+  }
 
   useEffect(() => {
     loadItems();
@@ -36,11 +40,15 @@ export default function App() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Nueva tarea"
         />
-        <button>Añadir</button>
+        <button className="addButton">Añadir</button>
       </form>
       <ul>
         {items.map((item) => (
-          <li key={item.id}>{item.title}</li>
+          
+         <>
+          <li key={item.id}>{item.title} <button className="deleteButton" onClick={() => deleteItem(item.id)}>Delete🗑️ </button></li>
+          
+          </>
         ))}
       </ul>
     </div>
